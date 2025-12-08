@@ -1,0 +1,352 @@
+.project_section {
+    border-bottom: none;
+}
+
+/* 프로젝트 안내 문구 */
+.project_notice {
+    margin-top: 10px;
+    margin-bottom: 28px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- 프로젝트 카드 그리드 --- */
+.project_grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* --- 프로젝트 카드 박스 --- */
+.project_card {
+    background: #fff;
+    border-radius: 18px; 
+    padding: 24px 26px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e7eef7;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+/* --- 프로젝트 헤더 (제목 + 기간) --- */
+.project_header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.project_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.project_period {
+    font-size: 14px;
+    color: #5f697b;
+    margin-bottom: 10px;
+}
+
+/* --- 프로젝트 요약 --- */
+.project_summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #444;
+    margin-top: 40px;
+}
+
+/* --- 링크 영역 --- */
+.project_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.project_link {
+    background: #e9f2ff;
+    color: #3b6ab7;
+    width: 100px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+}
+
+.project_link:hover {
+    background: #d8e7ff;
+}
+
+/* --- 이미지(캡처) 버튼 --- */
+.project_img_btn {
+    background: #e9f2ff;
+    color: #3b6ab7;
+    width: 100px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.project_img_btn:hover {
+    background: #d8e7ff;
+}
+
+/* 폰트어썸 아이콘 */
+.fa-project-icon {
+    text-align: center;
+    font-size: 18px;
+    width: 20px;
+}
+
+/* 모달 */
+.project_modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);  /* 반투명 블러 배경 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* 모달 콘텐츠 박스 */
+.project_modal_content {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    padding: 28px 30px 40px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* 닫기 버튼 */
+.project_modal_close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.project_modal_close:hover {
+    color: #777;
+}
+
+/* 슬라이더 전체 영역 */
+.slider_container {
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f3f6fb;
+}
+
+/* 이미지 리스트 */
+.slider_images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.35s ease;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.35s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+/* 페이지 버튼 */
+.slide_pagination {
+    position: static;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 숫자 */
+.slide_pagination span {
+    font-weight: 600;
+}
+
+/* 페이지 이동 버튼 */
+.page_prev,
+.page_next {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #444;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.page_prev:hover,
+.page_next:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* 모달 반응형 */
+@media (max-width: 600px) {
+    .project_modal_content {
+        padding: 20px;
+    }
+
+    .slider_container {
+        height: 320px;
+    }
+
+    .slide_btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .slide_pagination {
+        font-size: 12px;
+    }
+
+    .project_modal_close {
+        font-size: 24px;
+        right: 12px;
+        top: 10px;
+    }
+}
+
+/* 반응형 */
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .project_grid {
+        flex-wrap: wrap;
+        gap: 24px;
+        max-width: 90%;
+    }
+
+    .project_card {
+        width: 360px;
+        height: 300px;
+        padding: 22px 24px;
+    }
+
+    .project_title {
+        font-size: 20px;
+    }
+
+    .project_summary {
+        font-size: 14px;
+        margin-top: 32px;
+    }
+
+    .project_link,
+    .project_img_btn {
+        width: 90px;
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+.project_notice {
+        font-size: 13px;
+        margin-bottom: 20px;
+        padding: 0 12px; /* mobile에서 양옆 여백 추가해 글자 안 붙게 */
+    }
+
+    .project_grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .project_card {
+        width: 90%;
+        height: auto; /* 높이 고정하면 텍스트 줄바꿈에서 깨질 수 있음 */
+        padding: 20px 22px;
+    }
+
+    .project_header {
+        margin-bottom: 16px;
+    }
+
+    .project_title {
+        font-size: 18px;
+    }
+
+    .project_period {
+        font-size: 13px;
+    }
+
+    .project_summary {
+        margin-top: 18px;
+        font-size: 14px;
+        margin-bottom: 80px; /* 버튼과 겹치지 않도록 */
+    }
+
+    .project_links {
+        bottom: 20px;
+        gap: 8px;
+    }
+
+    .project_link,
+    .project_img_btn {
+        width: 85px;
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    /* 아이콘 살짝 축소 */
+    .fa-solid, .fa-github {
+        font-size: 16px;
+        width: 18px;
+    }
+}

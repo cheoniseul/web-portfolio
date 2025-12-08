@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천이슬 포트폴리오</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="index_header">
+        <a href="index.html" class="logo">cheon iseul</a>
+        <!-- 기본 데스크탑 메뉴 -->
+        <nav class="nav_menu" id="navMenu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+        <!-- 햄버거 버튼 -->
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <!-- 메인 -->
+    <main class="container">
+        <!-- hero -->
+        <section id="hero" class="hero_section">
+            <h1 class="hero_title">
+                <span>P</span>
+                <span>o</span>
+                <span>r</span>
+                <span>t</span>
+                <span>f</span>
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>o</span>
+            </h1>
+            <p>안녕하세요.<br>깔끔한 UI와 사용성 중심의 웹을 만드는 Frontend 개발자 천이슬입니다.</p>
+            <a href="#about" class="hero_btn">About Me</a>
+        </section>
+        <!-- about -->
+        <section class="about_section" id="about">
+            <h2 class="section_title">About</h2>
+            <div class="about_card">
+                <div class="about_avatar">
+                    <img src="image/profile.jpg" alt="기본 프로필">
+                </div>
+                <div class="about_text">
+                    <ul class="basic_info">
+                        <li><i class="fa-solid fa-user fa-about-icon"></i>천이슬</li>
+                        <li><i class="fa-solid fa-envelope fa-about-icon"></i>
+                            <a href="mailto:cheoniseul25@gmail.com" class="info_link">
+                                cheoniseul25@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-github fa-about-icon"></i>
+                            <a href="https://github.com/cheoniseul/portfolio" target="_blank" class="info_link">
+                                github.com/cheoniseul
+                            </a>
+                        </li>
+                        <li><i class="fa-solid fa-phone fa-about-icon"></i>010-0000-0000</li>
+                        <li><i class="fa-solid fa-location-dot fa-about-icon"></i>대전광역시 중구</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- skills -->
+        <section class="skills_section" id="skills">
+            <h2 class="section_title">Skills</h2>
+            <!-- 태그 버튼들 -->
+            <div class="skill_group_wrapper">
+                <!-- Front-end -->
+                <div class="skill_group">
+                    <h3 class="skill_group_title">Front-end</h3>
+                    <div class="skill_front">
+                        <button class="skill_tag" data-skill="html">#HTML5</button>
+                        <button class="skill_tag" data-skill="css">#CSS3</button>
+                        <button class="skill_tag" data-skill="js">#JavaScript</button>
+                        <button class="skill_tag" data-skill="chart">#Chart.js</button>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill_group">
+                    <h3 class="skill_group_title">Tools</h3>
+                    <div class="skill_tool">
+                        <button class="skill_tag" data-skill="github">#GitHub</button>
+                        <button class="skill_tag" data-skill="figma">#Figma</button>
+                        <button class="skill_tag" data-skill="vscode">#VSCode</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 선택된 태그의 상세 내용 -->
+            <div class="skill_detail">
+
+                <!-- 기술명 -->
+                <h3 id="skill_title">기술명을 선택해주세요.</h3>
+
+                <!-- 경험/레벨 bar -->
+                <div class="skill_bar_wrapper">
+                    <div class="skill_bar" id="skill_bar">
+                        <span class="skill_percent" id="skill_percent"></span>
+                    </div>
+                </div>
+
+                <!-- 기술 설명 -->
+                <p id="skill_desc">태그 버튼을 클릭하면 상세 설명이 표시됩니다.</p>
+            </div>
+        </section>
+        <!-- project -->
+        <section class="project_section" id="projects">
+            <h2 class="section_title">Projects</h2>
+            <p class="project_notice">
+                각 프로젝트 이미지는 제가 직접 구현한 화면만을 선별하여 정리했습니다.
+            </p>
+            <div class="project_grid">
+                <!-- 프로젝트 카드 1 -->
+                <article class="project_card">
+                    <!-- 프로젝트 헤더 -->
+                    <header class="project_header">
+                        <h3 class="project_title">응급처치 교육 LMS</h3>
+                        <span class="project_period">2025.11 ~ 2025.12 · 6인 팀 프로젝트 · Front-end</span>
+                    </header>
+                    <!-- 간단 개요 -->
+                    <p class="project_summary">
+                        응급 상황에서 필요한 기초 응급처치 지식을 효율적으로 학습할 수 있는 온라인 교육 웹사이트입니다.
+                    </p>
+                    <!-- 프로젝트 링크 -->
+                    <div class="project_links">
+                        <a href="https://github.com/iseul25/portfolio/tree/main/02-first-aid-lms" target="_blank"
+                            class="project_link">
+                            <i class="fa-brands fa-github fa-project-icon"></i>GitHub
+                        </a>
+                        <a href="https://your-demo-link.com" target="_blank" class="project_link">
+                            <i class="fa-solid fa-globe fa-project-icon"></i>Live
+                        </a>
+                        <!-- 이미지 버튼 -->
+                        <button class="project_img_btn" data-img="firstAid_img">
+                            <i class="fa-solid fa-image fa-project-icon"></i>이미지
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 프로젝트 카드 2 -->
+                <article class="project_card">
+                    <!-- 프로젝트 헤더 -->
+                    <header class="project_header">
+                        <h3 class="project_title">역사 한 걸음 LMS</h3>
+                        <span class="project_period">2025.09 ~ 2025.10 · 5인 팀 프로젝트 · Front-end</span>
+                    </header>
+                    <!-- 간단 개요 -->
+                    <p class="project_summary">
+                        중학교 학생들을 위한 온라인 역사 교육 콘텐츠를<br> 제공하는 웹사이트입니다.
+                    </p>
+                    <!-- 프로젝트 링크 -->
+                    <div class="project_links">
+                        <a href="https://github.com/iseul25/portfolio/tree/main/01-history-education-lms"
+                            target="_blank" class="project_link">
+                            <i class="fa-brands fa-github fa-project-icon"></i>GitHub
+                        </a>
+                        <a href="https://your-demo-link.com" target="_blank" class="project_link">
+                            <i class="fa-solid fa-globe fa-project-icon"></i>Live
+                        </a>
+                        <!-- 이미지 버튼 -->
+                        <button class="project_img_btn" data-img="history_img">
+                            <i class="fa-solid fa-image fa-project-icon"></i>이미지
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 이미지 슬라이더 모달 -->
+        <div class="project_modal" id="project_img_modal">
+            <div class="project_modal_content">
+
+                <button class="project_modal_close">&times;</button>
+
+                <!-- 슬라이더 wrapper -->
+                <div class="slider_container">
+
+                    <!-- 이미지 리스트 (JS로 동적 삽입) -->
+                    <div class="slider_images"></div>
+
+                </div>
+                <!-- 이전/다음 버튼 -->
+                <div class="slide_pagination">
+                    <button class="page_prev"><i class="fa-solid fa-angle-left"></i></button>
+                    <span class="page_now">1</span>
+                    <span>/</span>
+                    <span class="page_total">1</span>
+                    <button class="page_next"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 푸터 -->
+    <footer class="index_footer">
+        <p class="footer_copy">© 2025 Cheon Iseul. All rights reserved.</p>
+
+        <div class="footer_links">
+            <a href="mailto:cheoniseul25@gmail.com" class="footer_link">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="footer_text">cheoniseul25@gmail.com</span>
+            </a>
+
+            <a href="https://github.com/cheoniseul/portfolio" target="_blank" class="footer_link">
+                <i class="fa-brands fa-github"></i>
+                <span class="footer_text">github.com/cheoniseul/portfolio</span>
+            </a>
+        </div>
+    </footer>
+</body>
+<!-- index 전용 js -->
+<script src="js/index.js"></script>
+
+</html>

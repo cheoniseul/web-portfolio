@@ -1,0 +1,47 @@
+section {
+    position: relative;
+    border-bottom: 2px dashed #abc8f3;
+    width: 100%;
+    padding: 130px 0 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-margin-top: 70px;
+}
+
+.section_title {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 750;
+}
+
+/* 반응형 */
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 110px 0 90px;
+    }
+
+    .section_title {
+        font-size: 38px;
+        top: 25px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    section {
+        padding: 90px 20px 70px;
+    }
+
+    .section_title {
+        font-size: 30px;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+

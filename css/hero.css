@@ -1,0 +1,110 @@
+/* portfolio */
+.hero_title {
+    letter-spacing: -1.8px;
+    margin-bottom: 20px;
+}
+
+.hero_title span {
+    display: inline-block;
+    font-size: 65px;
+    font-weight: 750;
+    opacity: 0;
+    transform: translateX(-120px) translateY(0) scale(0.9);
+    animation: jumpIn 0.94s ease-out forwards;
+}
+
+/* 순서 딜레이 */
+.hero_title span:nth-child(1) { animation-delay: 0s; }
+.hero_title span:nth-child(2) { animation-delay: 0.05s; }
+.hero_title span:nth-child(3) { animation-delay: 0.10s; }
+.hero_title span:nth-child(4) { animation-delay: 0.15s; }
+.hero_title span:nth-child(5) { animation-delay: 0.20s; }
+.hero_title span:nth-child(6) { animation-delay: 0.25s; }
+.hero_title span:nth-child(7) { animation-delay: 0.30s; }
+.hero_title span:nth-child(8) { animation-delay: 0.35s; }
+.hero_title span:nth-child(9) { animation-delay: 0.40s; }
+
+/* 픽사식 점프 이동 애니메이션 */
+@keyframes jumpIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px) translateY(0px) scale(0.9);
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(-90px) translateY(-25px) scale(1); /* 첫 점프 */
+    }
+    40% {
+        transform: translateX(-50px) translateY(0px) scale(0.95, 1.05); /* 착지 찌그러짐 */
+    }
+    60% {
+        transform: translateX(-20px) translateY(-18px) scale(1.05); /* 두 번째 작은 점프 */
+    }
+    80% {
+        transform: translateX(-6px) translateY(0px) scale(0.97, 1.03); /* 다시 착지 */
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1); /* 부드럽게 제자리 */
+        opacity: 1;
+    }
+}
+
+.hero_section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* 버튼 스타일 */
+.hero_btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+.hero_btn:hover {
+    background: #000;
+    transform: translateY(-3px);
+}
+
+/* 반응형 */
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .hero_title span {
+        font-size: 48px;      /* PC 65px → Tablet 48px */
+    }
+
+    .hero_section p {
+        font-size: 17px;
+    }
+
+    .hero_btn {
+        padding: 13px 26px;
+        font-size: 17px;
+    }
+
+    .hero_title {
+        margin-bottom: 18px;  /* 제목과 본문 간격 조금 축소 */
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .hero_title span {
+        font-size: 32px;
+    }
+
+    .hero_section p {
+        font-size: 16px;
+    }
+
+    .hero_btn {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+}
