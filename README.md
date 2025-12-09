@@ -14,4 +14,6 @@ About, Skills, Projects 섹션으로 구성되어 있으며
 - **Skills** : 사용 가능한 기술 소개
 - **Projects** : 1차 · 2차 팀 프로젝트 소개
 
-## 배포 링크
+## 이동 링크
+-  [portfolio](https://github.com/cheoniseul/portfolio)
+-  []()
