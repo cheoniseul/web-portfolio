@@ -16,4 +16,4 @@ About, Skills, Projects 섹션으로 구성되어 있으며
 
 ## 이동 링크
 -  [portfolio](https://github.com/cheoniseul/portfolio)
--  []()
+-  [02-first-aid-lms-code](https://github.com/cheoniseul/02-first-aid-lms-code)
