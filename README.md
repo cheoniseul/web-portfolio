@@ -21,5 +21,5 @@ About, Skills, Projects로 구성된 정적 웹 페이지이며
 ---
 
 ## 관련 레포지토리
-- [portfolio](https://github.com/cheoniseul/portfolio)  
+- [포트폴리오로 돌아가기](https://github.com/cheoniseul/portfolio)  
 - [02-first-aid-lms (code)](https://github.com/cheoniseul/02-first-aid-lms-code)
