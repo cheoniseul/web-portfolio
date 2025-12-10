@@ -82,8 +82,10 @@
     .top_row,
     .bottom_row {
         flex-direction: column;
-        gap: 18px;
         align-items: center;
+        gap: 20px;
+        margin: 0;
+        padding: 9px;
     }
 
     .info_item {
