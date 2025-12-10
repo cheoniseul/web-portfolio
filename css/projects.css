@@ -371,7 +371,7 @@
     }
 
     .project_card {
-        width: 90%;
+        width: 95%;
         height: auto; /* 높이 고정하면 텍스트 줄바꿈에서 깨질 수 있음 */
         padding: 20px 22px;
     }
