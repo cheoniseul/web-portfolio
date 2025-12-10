@@ -89,19 +89,26 @@ tags.forEach(tag => {
 // 프로젝트별 이미지 배열
 const projectImages = {
     firstAid_img: [
-        "../image/adminDashBoard1-vs.png",
-        "../image/adminUser1-vs.png",
-        "../image/adminUser2-vs.png",
-        "../image/adminCourseAdd1-vs.png",
-        "../image/adminCourseAdd2-vs.png",
-        "../image/adminEduAdd1-vs.png",
-        "../image/adminInquiry1-vs.png",
-        "../image/adminInquiry2-vs.png"
+        "../image/firstAid/firstAid-adminDashBoard1.png",
+        "../image/firstAid/firstAid-adminUser1.png",
+        "../image/firstAid/firstAid-adminUser2.png",
+        "../image/firstAid/firstAid-adminCourse1.png",
+        "../image/firstAid/firstAid-adminCourseAdd1.png",
+        "../image/firstAid/firstAid-adminCourseAdd2.png",
+        "../image/firstAid/firstAid-adminEduAdd1.png",
+        "../image/firstAid/firstAid-adminInquiry1.png",
+        "../image/firstAid/firstAid-adminInquiry2.png"
     ],
     history_img: [
-        "img/history_1.png",
-        "img/history_2.png",
-        "img/history_3.png"
+        "../image/history/history-home.png",
+        "../image/history/history-study.png",
+        "../image/history/history-quiz1.png",
+        "../image/history/history-quiz2.png",
+        "../image/history/history-pointStore.png",
+        "../image/history/history-adminQuizList.png",
+        "../image/history/history-adminComment.png",
+        "../image/history/history-adminStore1.png",
+        "../image/history/history-adminStore2.png"
     ]
 };
 

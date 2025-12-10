@@ -1,4 +1,9 @@
-/* portfolio */
+.hero_section {
+    justify-content: flex-start;
+    padding-top: 160px;
+    padding-bottom: 70px;
+}
+
 .hero_title {
     letter-spacing: -1.8px;
     margin-bottom: 20px;
@@ -58,18 +63,17 @@
 
 /* 버튼 스타일 */
 .hero_btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #333;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 8px;
-    transition: 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px; /* 아이콘 크기 */
+    color: #333; /* 기본 검정 */
+    transition: color 0.3s ease;
+    margin-top: 70px;
 }
 
 .hero_btn:hover {
-    background: #000;
-    transform: translateY(-3px);
+    color: #81aff3;
 }
 
 /* 반응형 */
