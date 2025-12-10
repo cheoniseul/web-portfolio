@@ -47,6 +47,22 @@
     width: 25px;
 }
 
+/* fade 애니메이션 */
+/* About 섹션 기본 숨겨진 상태 */
+.fade-about {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 
+        opacity 0.9s ease-out,
+        transform 0.9s ease-out;
+}
+
+/* 화면에 등장할 때 */
+.fade-about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* 반응형 */
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {

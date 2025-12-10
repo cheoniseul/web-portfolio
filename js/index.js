@@ -7,8 +7,39 @@ hamburgerBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
+// about fade
+// ABOUT 섹션 전용 Observer
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+// fade-about 요소 모두 등록
+document.querySelectorAll(".fade-about").forEach(el => aboutObserver.observe(el));
+
 
 // skills
+// fade
+// SKILLS 섹션 전용 Observer
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+// fade-skills 요소 대상
+document.querySelectorAll(".fade-skills").forEach(el => skillsObserver.observe(el));
+
+
 // 기술별 설명 & 숙련도 데이터
 const skillData = {
     html: {
@@ -86,6 +117,22 @@ tags.forEach(tag => {
 
 
 // project
+// fade
+// PROJECT 섹션 전용 Observer
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+// fade-project 요소에 적용
+document.querySelectorAll(".fade-project").forEach(el => projectObserver.observe(el));
+
+
 // 프로젝트별 이미지 배열
 const projectImages = {
     firstAid_img: [
