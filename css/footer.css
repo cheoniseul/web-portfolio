@@ -46,7 +46,7 @@
 
 .footer_link:hover .footer_text {
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
 }
 
 /* 반응형 */

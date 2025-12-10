@@ -112,6 +112,31 @@ const projectImages = {
     ]
 };
 
+const projectDescriptions = {
+    firstAid_img: [
+        "관리자 대시보드 - 서비스 핵심 지표를 한눈에 확인",
+        "회원 목록 페이지 - 회원 검색 기능 지원",
+        "회원 상세 페이지 - 회원의 수강 정보 및 상태 확인",
+        "강의 목록 페이지 - 검색 및 분류(필터) 기능 지원",
+        "강의 등록 페이지1 - 강의 기본 정보 입력",
+        "강의 등록 페이지2 - 강의 영상 자막 입력 및 관리",
+        "교육자료 등록 페이지 - 자료 업로드 및 입력폼 구성",
+        "문의사항 목록 - 검색 및 필터를 통한 문의 관리",
+        "문의 상세 보기 및 답변 등록"
+    ],
+    history_img: [
+        "메인 홈 페이지",
+        "학습 페이지 - 원하는 학습 주제 선택",
+        "퀴즈 페이지 1 - 퀴즈 풀이 화면",
+        "퀴즈 페이지 2 - 오답 확인 및 정답 학습",
+        "포인트 상점 - 포인트를 이용한 상품 구매 기능",
+        "관리자 퀴즈 목록 관리",
+        "관리자 댓글 관리",
+        "관리자 상품 및 주문 목록 관리",
+        "상품 등록 모달 - 상품 정보 입력폼 구성"
+    ]
+};
+
 
 // DOM 요소
 const projectModal = document.getElementById("project_img_modal");
@@ -124,20 +149,23 @@ const pageNext = document.querySelector(".page_next");
 const pageNow = document.querySelector(".page_now");
 const pageTotal = document.querySelector(".page_total");
 
-let currentIndex = 0; 
+let currentIndex = 0;
 let currentImageList = [];
+
+let currentKey = "";
 
 
 // 모달 열기 (프로젝트 이미지 버튼 클릭 시)
 document.querySelectorAll(".project_img_btn").forEach(btn => {
     btn.addEventListener("click", () => {
-        const key = btn.dataset.img;               // 해당 프로젝트 키
-        currentImageList = projectImages[key];     // 이미지 배열 가져오기
-        currentIndex = 0;                          // 첫 번째 이미지부터 시작
+        currentKey = btn.dataset.img; // 해당 프로젝트 키
+        currentImageList = projectImages[currentKey]; // 이미지 배열 가져오기
+        currentIndex = 0; // 첫 번째 이미지부터 시작
 
         openModal();
         renderImages();
         updateSlide();
+        updateDescription();
     });
 });
 
@@ -146,13 +174,23 @@ document.querySelectorAll(".project_img_btn").forEach(btn => {
 function openModal() {
     projectModal.style.display = "flex";
     document.body.style.overflow = "hidden"; // 스크롤 잠금
+
+    // 애니메이션 위해 약간의 지연 후 show 클래스 추가
+    setTimeout(() => {
+        projectModal.classList.add("show");
+    }, 10);
 }
 
 
 // 모달 닫기
 function closeModal() {
-    projectModal.style.display = "none";
+    projectModal.classList.remove("show");
     document.body.style.overflow = "auto";
+
+    // 애니메이션 끝난 후 display none 처리 (0.3s과 맞춤)
+    setTimeout(() => {
+        projectModal.style.display = "none";
+    }, 300);
 }
 
 btnClose.addEventListener("click", closeModal);
@@ -189,8 +227,15 @@ function updateSlide() {
     slides[currentIndex].classList.add("active");
 
     pageNow.textContent = currentIndex + 1;
+
+    updateDescription();
 }
 
+// 화면 설명
+function updateDescription() {
+    document.querySelector(".slide_description").textContent =
+        projectDescriptions[currentKey][currentIndex];
+}
 
 // 페이지 이동 버튼
 pagePrev.addEventListener("click", () => {

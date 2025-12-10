@@ -7,17 +7,35 @@
     align-items: center;
     padding: 16px 80px;
     background: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e5eaf6;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    transition: 0.3s ease-out;
+}
+
+.logo:hover {
+    transform: translateY(-3px);
+}
+
 .nav_menu ul {
     display: flex;
     gap: 70px;
     font-size: 18px;
+    color: #222;
+    font-weight: 500;
+}
+
+.nav_menu li:hover {
+    color: #4076d3;
 }
 
 /* 햄버거 버튼 */
@@ -53,6 +71,11 @@
 /* 반응형 */
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+    .logo {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+    }
+
     .index_header {
         padding: 16px 40px;
         height: 70px;
@@ -66,6 +89,15 @@
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+        letter-spacing: 0px;
+        /* 너무 넓으면 모바일에서 어색함 */
+    }
+
+    .logo:hover {
+        transform: translateY(-2px);
+    }
 
     /* 햄버거 버튼 보이게 */
     .hamburger {

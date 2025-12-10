@@ -66,8 +66,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px; /* 아이콘 크기 */
-    color: #333; /* 기본 검정 */
+    font-size: 60px;
+    color: #333;
     transition: color 0.3s ease;
     margin-top: 70px;
 }
@@ -80,7 +80,7 @@
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
     .hero_title span {
-        font-size: 48px;      /* PC 65px → Tablet 48px */
+        font-size: 48px;
     }
 
     .hero_section p {
@@ -88,12 +88,12 @@
     }
 
     .hero_btn {
-        padding: 13px 26px;
-        font-size: 17px;
+        font-size: 55px;
+        margin-top: 55px;
     }
 
     .hero_title {
-        margin-bottom: 18px;  /* 제목과 본문 간격 조금 축소 */
+        margin-bottom: 18px;
     }
 }
 
@@ -108,7 +108,7 @@
     }
 
     .hero_btn {
-        padding: 12px 22px;
-        font-size: 16px;
+        font-size: 48px;
+        margin-top: 40px;
     }
 }

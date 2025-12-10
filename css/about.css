@@ -1,41 +1,42 @@
 /* 프로필 카드 */
 .about_card {
+    padding: 50px 50px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.info_row {
+    padding: 25px 26px;
+}
+
+.top_row {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    border: 1px solid #d8e6fb;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    padding: 35px;
-    gap: 50px;
-    width: 60%;
-    background-color: #fff;
+    gap: 80px;
 }
 
-/* 카드 안 이미지 */
-.about_avatar img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.bottom_row {
+    display: flex;
+    justify-content: center;
+    gap: 61px;
 }
 
-/* 카드 안 텍스트 */
-.basic_info li {
+.info_item {
+    font-size: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 20px;
-    color: #333;
+    gap: 7px;
 }
 
-.basic_info a.info_link {
+.info_link {
     color: #333;
     text-decoration: none;
 }
 
-.basic_info a.info_link:hover {
-    color: #abc8f3;
+.info_link:hover {
+    color: #5285db;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 
@@ -50,46 +51,48 @@
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
     .about_card {
-        width: 70%;
-        padding: 30px;
-        gap: 35px;
+        padding: 40px 35px;
+        max-width: 85%;
     }
 
-    .about_avatar img {
-        width: 170px;
-        height: 170px;
+    .top_row,
+    .bottom_row {
+        gap: 50px;
     }
 
-    .basic_info li {
+    .info_item {
         font-size: 18px;
-        gap: 15px;
+        gap: 6px;
+    }
+
+    .fa-about-icon {
+        font-size: 18px;
+        width: 22px;
     }
 }
 
 /*  Mobile (≤768px) */
 @media (max-width: 768px) {
     .about_card {
-        flex-direction: column;   /* 가로 → 세로 */
-        width: 70%;
-        padding: 25px;
-        gap: 25px;
-        text-align: center;
-        margin-top: 100px;
+        padding: 25px 20px;
+        max-width: 90%;
     }
 
-    .about_avatar img {
-        width: 140px;
-        height: 140px;
+    /* 줄 자체를 세로로 정렬 */
+    .top_row,
+    .bottom_row {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
     }
 
-    .basic_info li {
-        justify-content: flex-start;
-        font-size: 16px;
-        gap: 10px;
+    .info_item {
+        font-size: 17px;
+        gap: 6px;
     }
 
-    .fa-solid {
+    .fa-about-icon {
         width: 20px;
-        font-size: 18px;
+        font-size: 17px;
     }
 }
