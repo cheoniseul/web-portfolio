@@ -15,10 +15,10 @@
 .project_grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     margin-top: 30px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 /* 프로젝트 카드 박스 */
@@ -28,8 +28,8 @@
     padding: 24px 26px;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
     border: 1px solid #e7eef7;
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
     position: relative;
 }
 
@@ -67,7 +67,7 @@
 .project_role {
     font-size: 14px;
     color: #5f697b;
-    margin-top: 25px;
+    margin-top: 40px;
     text-align: left;
 }
 
@@ -382,13 +382,14 @@
 
     .project_grid {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 25px;
         width: 100%;
     }
 
     .project_card {
-        width: 95%;
+        width: 100%;
+        max-width: 100%;
         height: auto; /* 높이 고정하면 텍스트 줄바꿈에서 깨질 수 있음 */
         padding: 20px 22px;
     }
@@ -408,20 +409,22 @@
     .project_summary {
         margin-top: 20px;
         font-size: 14px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     .project_role {
         font-size: 12px; 
-        /* margin-top: 16px; */
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         line-height: 1.5;
         padding-right: 6px;
     }
 
     .project_links {
-        bottom: 20px;
-        gap: 8px;
+        position: static;
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
     .project_link,

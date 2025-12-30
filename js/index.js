@@ -135,6 +135,18 @@ document.querySelectorAll(".fade-project").forEach(el => projectObserver.observe
 
 // 프로젝트별 이미지 배열
 const projectImages = {
+    pokedex_img: [
+        "image/pokedex/pokemon-index.png",
+        "image/pokedex/pokemon-filter2.png",
+        "image/pokedex/pokemon-modal.png",
+        "image/pokedex/pokemon-mobile.png",
+        "image/pokedex/pokemon-mobile-filter.png",
+        "image/pokedex/pokemon-mobile-modal1.png",
+        "image/pokedex/pokemon-tablet.png",
+        "image/pokedex/pokemon-tablet-filter.png",
+        "image/pokedex/pokemon-tablet-modal.png"
+    ],
+
     firstAid_img: [
         "image/firstAid/firstAid-adminDashBoard1.png",
         "image/firstAid/firstAid-adminUser1.png",
@@ -146,6 +158,7 @@ const projectImages = {
         "image/firstAid/firstAid-adminInquiry1.png",
         "image/firstAid/firstAid-adminInquiry2.png"
     ],
+
     history_img: [
         "image/history/history-home.png",
         "image/history/history-study.png",
@@ -160,6 +173,20 @@ const projectImages = {
 };
 
 const projectDescriptions = {
+    pokedex_img: [
+        "포켓몬 도감 메인 페이지 - 포켓몬 카드 리스트 확인",
+        "포켓몬 검색 필터 - 이름, 지방, 타입 조건으로 포켓몬 검색 가능",
+        "포켓몬 상세 모달 - 분류, 타입 등 상세 정보 확인",
+
+        "모바일 반응형 메인 - 화면 크기에 맞춰 카드 레이아웃 자동 조정",
+        "모바일 반응형 검색 필터 - 필터 선택 후 검색 시 상세 필터 영역 자동 닫힘",
+        "모바일 반응형 상세 모달 - 모바일 환경에서 스크롤 및 터치 조작에 맞게 UI 최적화",
+
+        "태블릿 반응형 메인 - 태블릿 화면에 맞춰 카드 그리드 구조 조정",
+        "태블릿 반응형 검색 필터 - 넓은 화면을 활용한 필터 UI 배치 유지",
+        "태블릿 반응형 상세 모달 - 콘텐츠 가독성을 고려한 모달 크기 조정"
+    ],
+
     firstAid_img: [
         "관리자 대시보드 - 서비스 핵심 지표를 한눈에 확인",
         "회원 목록 페이지 - 회원 검색 기능 지원",
@@ -171,6 +198,7 @@ const projectDescriptions = {
         "문의사항 목록 - 검색 및 필터를 통한 문의 관리",
         "문의 상세 보기 및 답변 등록"
     ],
+
     history_img: [
         "메인 홈 페이지",
         "학습 페이지 - 원하는 학습 주제 선택",
