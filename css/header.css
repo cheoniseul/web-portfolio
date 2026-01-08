@@ -94,6 +94,10 @@
 /* 반응형 */
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+    .index_header {
+        padding: 16px 40px;
+    }
+
     .logo {
         font-size: 22px;
         letter-spacing: 0.5px;
@@ -117,10 +121,14 @@
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
+    .index_header {
+        padding: 14px 20px;
+        height: 64px;
+    }
+
     .logo {
         font-size: 18px;
         letter-spacing: 0px;
-        /* 너무 넓으면 모바일에서 어색함 */
     }
 
     .logo:hover {
