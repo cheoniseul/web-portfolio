@@ -24,7 +24,7 @@
 /* 프로젝트 카드 박스 */
 .project_card {
     background: #fff;
-    border-radius: 18px; 
+    border-radius: 18px;
     padding: 24px 26px;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
     border: 1px solid #e7eef7;
@@ -74,55 +74,49 @@
 
 /* 링크 영역 */
 .project_links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
     position: absolute;
-    bottom: 25px;
     left: 26px;
+    right: 26px;
+    bottom: 25px;
     transform: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    align-items: center;
 }
 
-.project_link {
+.project_link,
+.project_img_btn {
     background: #e9f2ff;
     color: #3b6ab7;
-    width: 100px;
-    padding: 6px 12px;
+
+    width: 100%;
+    height: 36px;
+    padding: 0px 12px;
+
     font-size: 16px;
     border-radius: 8px;
     font-weight: 550;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
+
     transition: background 0.2s ease;
+    white-space: nowrap;
 }
 
-.project_link:hover {
+.project_link:hover,
+.project_img_btn:hover {
     background: #d8e7ff;
 }
 
 /* 이미지 버튼 */
 .project_img_btn {
-    background: #e9f2ff;
-    color: #3b6ab7;
-    width: 100px;
-    padding: 6px 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    font-weight: 550;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
     border: none;
     cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.project_img_btn:hover {
-    background: #d8e7ff;
 }
 
 /* 폰트어썸 아이콘 */
@@ -130,13 +124,15 @@
     text-align: center;
     font-size: 18px;
     width: 20px;
+    flex: 0 0 18px;
 }
 
 /* 모달 */
 .project_modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);  /* 반투명 블러 배경 */
+    background: rgba(0, 0, 0, 0.6);
+    /* 반투명 블러 배경 */
     display: none;
     justify-content: center;
     align-items: center;
@@ -160,7 +156,7 @@
     width: 100%;
     padding: 28px 30px 40px;
     position: relative;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transform: scale(0.95);
     opacity: 0;
     transition: transform 0.35s ease, opacity 0.35s ease;
@@ -271,6 +267,7 @@
 
 /* 모달 반응형 */
 @media (max-width: 600px) {
+
     /* 모달 여백 줄이기 */
     .project_modal {
         padding: 10px;
@@ -366,18 +363,19 @@
 
     .project_link,
     .project_img_btn {
-        width: 90px;
         font-size: 15px;
-        padding: 6px 10px;
+        height: 34px;
+        padding: 0px 10px;
     }
 }
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
-.project_notice {
+    .project_notice {
         font-size: 13px;
         margin-bottom: 20px;
-        padding: 0 12px; /* mobile에서 양옆 여백 추가해 글자 안 붙게 */
+        padding: 0 12px;
+        /* mobile에서 양옆 여백 추가해 글자 안 붙게 */
     }
 
     .project_grid {
@@ -390,7 +388,7 @@
     .project_card {
         width: 100%;
         max-width: 100%;
-        height: auto; /* 높이 고정하면 텍스트 줄바꿈에서 깨질 수 있음 */
+        height: auto;
         padding: 20px 22px;
     }
 
@@ -413,7 +411,7 @@
     }
 
     .project_role {
-        font-size: 12px; 
+        font-size: 12px;
         margin-bottom: 30px;
         line-height: 1.5;
         padding-right: 6px;
@@ -421,22 +419,30 @@
 
     .project_links {
         position: static;
-        margin-top: 16px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        margin: 16px auto 0;
+
+        width: 100%;
+        max-width: 340px;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .project_link,
     .project_img_btn {
-        width: 85px;
-        font-size: 14px;
-        padding: 6px 8px;
+        width: 100%;
+        min-width: 0;
+        height: 32px;
+        font-size: 13px;
+        padding: 0 10px;
+        gap: 4px;
+        overflow: hidden;
     }
 
-    /* 아이콘 살짝 축소 */
-    .fa-solid, .fa-github {
-        font-size: 16px;
-        width: 18px;
+    .fa-project-icon {
+        font-size: 14px;
+        width: 14px;
+        flex: 0 0 14px;
     }
 }
